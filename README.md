@@ -8,12 +8,14 @@ HOW TO USE IT
 
 	-When install with a git clone or with a zip file, you just have to type
 	"make" or "make all" and "make re" works too.
-![Screenshot from 2023-06-16 13-49-36](https://github.com/43ougy/Dactylo_test/assets/128900324/f84658eb-0056-4618-a8de-93c15051ddf1)
-	
+
+![Screenshot from 2023-06-16 13-49-36](https://github.com/43ougy/Dactylo_test/assets/128900324/178c185f-9431-421a-84f2-6638c876452f)
+
 	-It makes a little executable names "dact".
 	-To launch it you just have to type 
 	"./dact liste.txt (because you can make more list) [number of word]".
-![Screenshot from 2023-06-16 13-50-54](https://github.com/43ougy/Dactylo_test/assets/128900324/bc563fdf-34a4-490b-ae25-7985f4390cbb)
+
+![Screenshot from 2023-06-16 13-50-54](https://github.com/43ougy/Dactylo_test/assets/128900324/ffaf7ca5-91d0-4709-a125-cf02f6af58e2)
 	
 	-And then it displays the words.
-![Screenshot from 2023-06-16 13-51-09](https://github.com/43ougy/Dactylo_test/assets/128900324/6c5d2627-38aa-4832-ac8a-e98642e5611f)
+![Screenshot from 2023-06-16 13-51-09](https://github.com/43ougy/Dactylo_test/assets/128900324/5a8f8916-56a7-41ed-bc8d-9d6e883856b2)
