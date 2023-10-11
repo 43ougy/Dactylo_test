@@ -7,10 +7,12 @@ char	*get_the_text(void)
 	char	*text;
 
 	fp = fopen("tmp.txt", "r");
-	len = file_len("tmp.txt") + 1;
+	len = file_len("tmp.txt");
 	text = malloc(sizeof(char) * len + 1);
+	if (!text)
+		return (NULL);
+	text[len] = '\0';
 	fgets(text, len, fp);
-	text[len + 1] = 0;
 	fclose(fp);
 	return (text);
 }
@@ -24,7 +26,7 @@ void	print_txt(char *txt)
 	c = 0;
 	while (txt[i])
 	{
-		if (c % 25 == 0 && c > 1)
+		if (c % 15 == 0 && c > 1)
 			write(1, "\n", 1);
 		if (txt[i] != ' ')
 			c++;

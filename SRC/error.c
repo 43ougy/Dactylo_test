@@ -7,25 +7,40 @@ int	check_atoi(long long nb)
 	return (1);
 }
 
-void	comp_txt(char *ret, char *lst)
+int	_ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int	l_c;
-	int	r_c;
+	int	len;
 
-	i = -1;
-	l_c = 0;
-	while (lst[++i])
+	i = 0;
+	if (ft_strlen(s1) > ft_strlen(s2))
+		len = ft_strlen(s1);
+	else
+		len = ft_strlen(s2);
+	while (i < len)
 	{
-		if (lst[i] != ' ')
-			l_c++;
+		if (s1[i] != s2[i])
+			return (1);
+		i++;
 	}
-	i = -1;
-	r_c = 0;
-	while (ret[++i])
+	return (0);
+}
+void	comp_txt(char *ret, char *lst)
+{
+	char	**liste;
+	char	**value;
+	int		i = 0;
+	int		fd = open("tmp.txt", O_RDWR);
+
+	liste = ft_split(lst);
+	value = ft_split(ret);
+	write(1, "\n", 1);
+	while (value[i] && liste[i])
 	{
-		if (ret[i] != ' ')
-			r_c++;
+		if (_ft_strcmp(value[i], liste[i]))
+			dprintf(fd, "\x1B[31m'%s' bad --> %s\x1B[0m\n", liste[i], value[i]);
+		else
+			dprintf(fd, "\x1B[32m'%s' good --> %s\x1B[0m\n", liste[i], value[i]);
+		i++;
 	}
-	printf("\nThere are [ %5d ] char\nYou have written [ %5d ] char\n\n", l_c - 1, r_c - 1);
 }

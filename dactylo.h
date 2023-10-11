@@ -2,10 +2,12 @@
 # define DACTYLO_H
 
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <time.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <ctype.h>
 
 int		ft_atoi(char *str);
 int		file_len(char *str);

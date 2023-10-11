@@ -7,15 +7,16 @@ int	main(int ac, char **av)
 	char	term[1000];
 	char	*txt;
 
-	if (ac < 2)
-		return (0);
+	if (ac != 3)
+		return (1);
 	srand(time(NULL));
 	nb_word = ft_atoi(av[2]);
 	words = word_list(av);
 	rand_word(nb_word, words);
-	txt = get_the_text();
+	if (!(txt = get_the_text()))
+		return (1);
 	print_txt(txt);
-	printf("\n\n");
+	write(1, "\n\n", 2);
 	fgets(term, 1000, stdin);
 	comp_txt(term, txt);
 	free(txt);
